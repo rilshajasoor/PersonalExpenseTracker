@@ -4,7 +4,7 @@ if (is_logged_in()) { header('Location: dashboard.php'); exit; }
 $error=''; $email='';
 if ($_SERVER['REQUEST_METHOD']==='POST') { verify_csrf(); $email=trim($_POST['email']??''); $password=$_POST['password']??'';
     $stmt=db()->prepare('SELECT id,name,password FROM users WHERE email=?'); $stmt->execute([$email]); $user=$stmt->fetch();
-    if ($user && password_verify($password,$user['password'])) { session_regenerate_id(true); $_SESSION['user_id']=(int)$user['id']; $_SESSION['user_name']=$user['name']; header('Location: dashboard.php'); exit; }
+    if ($user && password_verify($password,$user['password'])) { session_regenerate_id(true); $_SESSION['user_id']=(int)$user['id']; $_SESSION['name']=$user['name']; header('Location: dashboard.php'); exit; }
     $error='Incorrect email or password.';
 }
 $page_title='Login'; require '../includes/header.php';
