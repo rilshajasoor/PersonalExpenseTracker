@@ -52,7 +52,7 @@ for ($i = 0; $i < 6; $i++) {
 
 $page_title='Dashboard'; require '../includes/header.php';
 ?>
-<div class="page-heading"><div><p class="eyebrow">OVERVIEW</p><h1>Hello, <?= e($_SESSION['user_name']) ?> 👋</h1><p class="muted">Here is a summary of your finances.</p></div><a class="btn" href="add_transaction.php">+ Add transaction</a></div>
+<div class="page-heading"><div><p class="eyebrow">OVERVIEW</p><h1>Hello, <?= e($_SESSION['name'] ?? 'User'?> 👋</h1><p class="muted">Here is a summary of your finances.</p></div><a class="btn" href="add_transaction.php">+ Add transaction</a></div>
 <section class="summary-grid">
 <div class="summary-card"><span>Total income</span><strong class="positive">Rs. <?= number_format((float)$totals['income'],2) ?></strong></div>
 <div class="summary-card"><span>Total expenses</span><strong class="negative">Rs. <?= number_format((float)$totals['expenses'],2) ?></strong></div>
