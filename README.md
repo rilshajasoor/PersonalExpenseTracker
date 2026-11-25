@@ -30,5 +30,5 @@ A beginner-friendly web application built with HTML, CSS, JavaScript, PHP and My
 - Each user can only view and delete their own transactions.
 - This is a learning project starter. Before public deployment, add HTTPS, stronger production configuration, backups, and additional validation/security review.
 
-**Done By:** MJ Fathima Rilsha<br> To design a well-structured object-oriented model of a Personal Expense Tracker system that enables individuals to control monthly spending and manage personal finances efficiently from a single platform. </br>
+**Done By:** MJ Fathima Rilsha<br> Personal Expense Tracker system that enables individuals to control monthly spending and manage personal finances efficiently from a single platform. </br>
 
